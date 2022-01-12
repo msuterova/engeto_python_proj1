@@ -1,3 +1,5 @@
+# sample texts
+
 '''
 author =
 '''
@@ -30,3 +32,6 @@ garpike and stingray are also present.'''
 ]
 
 
+# usernames and passwords
+user_name = ("bob", "ann", "mike", "liz")
+user_password = ("123", "pass123", "password123", "pass123")
