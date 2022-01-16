@@ -66,6 +66,8 @@ for word in text.split():
     else:
         word_length[length] = 1
 
+bar_width = max(word_length.values()) + 1
+
 # print it all
 print(f'{sep}\n'
       f'There are {results["nr_words"]} words in the selected text.\n'
@@ -75,4 +77,8 @@ print(f'{sep}\n'
       f'There are {results["numbers"]} numeric strings.\n'
       f'The sum of all the numbers is {results["sum"]}.\n'
       f'{sep}\n'
-      f'LEN')
+      f'LEN|{"OCCURENCES".center(bar_width)}|NR.\n'
+      f'{sep}')
+
+for key in sorted(word_length):
+    print(f'{str(key).rjust(3)}|{str("*" * word_length[key]).ljust(bar_width)}|{word_length[key]}')
