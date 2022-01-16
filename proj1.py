@@ -18,15 +18,15 @@ nr_users = len(task_template.user_name)
 for user_index in range(nr_users):
     known_user = task_template.user_name[user_index]
     known_pass = task_template.user_password[user_index]
-    if known_user == username.lower() and known_pass == password:
+    if known_user == username and known_pass == password:
         break
     else:
         print("unregistered user, terminating the program..")
         quit()
 
 print(f'{sep}\n'
-      f'Welcome to the app, {username}\n'
-      f'We have " {str(len(task_template.TEXTS))} texts to be analyzed.\n'
+      f'Welcome to the app, {username}.\n'
+      f'We have {str(len(task_template.TEXTS))} texts to be analyzed.\n'
       f'{sep}')
 
 # let the user select a text
